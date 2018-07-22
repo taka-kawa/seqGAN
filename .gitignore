@@ -1,0 +1,7 @@
+__pycache__
+
+.DS_Store
+
+SeqGAN_python3/save/*.txt
+
+SeqGAN_python3/obama*
