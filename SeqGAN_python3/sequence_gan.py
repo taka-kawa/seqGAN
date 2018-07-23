@@ -146,7 +146,9 @@ def main():
     #  discriminatorの事前学習
     #######################################################################################################
     # Train 3 epoch on the generated data and do this for 50 times
-    for _ in range(50):
+    for t in range(50):
+        if t % 5 == 0:
+            print("times:{}".format(t))
         generate_samples(sess, generator, BATCH_SIZE, generated_num, negative_file)
         dis_data_loader.load_train_data(positive_file, negative_file)
         for _ in range(3):
